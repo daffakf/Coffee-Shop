@@ -1,2 +1,2 @@
 # Coffee-Shop
-Repositori ini sebagai latihan untuk mengimplementasi rancangan yang dibuat.
+Repositori ini sebagai latihan untuk implementasi rancangan yang dibuat.
