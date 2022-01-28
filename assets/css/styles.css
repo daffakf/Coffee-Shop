@@ -1,23 +1,23 @@
 body {
     font-family: "Avenir Next";
 }
-  
+
 li {
     list-style: none;
 }
-  
+
 /* Header */
 .header {
     background-color: #ddcdbd;
     color: #fff;
     height: 90px;
 }
-  
+
 .header-logo {
     float: left;
     padding: 20px 40px;
-  }
-  
+}
+
 .header-logo img {
     width: 100px;
 }
@@ -34,7 +34,7 @@ li {
 
 /* Top-Wrapper */
 .top-wrapper {
-    background-image: url(img/background_header3.jpg);
+    background-image: url(../img/background_header3.jpg);
     background-size: cover;
     opacity: 0.9;
     padding: 100px 80px;
@@ -46,7 +46,9 @@ li {
 }
 
 /* Main */
-.main-1 , .main-2 , .main-3 {
+.main-1,
+.main-2,
+.main-3 {
     padding: 100px 80px;
     height: 450px;
 }
@@ -62,7 +64,7 @@ li {
     left: 45px;
     top: 649px;
 
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 /* Main-2 Shop Location */
@@ -74,7 +76,7 @@ li {
     width: 1280px;
     height: auto;
 
-    border-radius: 5px; 
+    border-radius: 5px;
 }
 
 .contents-location p {
@@ -86,7 +88,7 @@ li {
 .contents-event {
     width: 300px;
     height: 300px;
-    
+
     float: left;
     margin: 0 20px;
 }
@@ -109,49 +111,50 @@ li {
 .main {
     padding: 100px 80px;
 }
-  
+
 .copy-container h1 {
     font-size: 140px;
 }
-  
+
 .copy-container h2 {
     font-size: 60px;
 }
-  
+
 .copy-container span {
     color: #ff4a4a;
 }
-  
+
 .contents {
     height: 500px;
     margin-top: 100px;
 }
-  
+
 .section-title {
     border-bottom: 2px solid #dee7ec;
     font-size: 28px;
     padding-bottom: 15px;
     margin-bottom: 50px;
 }
-  
+
 .contents-item {
     float: left;
     margin: 0 20px;
 
 }
-  
+
 .contents-item p {
     font-size: 24px;
     margin-top: 30px;
 }
 
-  /* Contact Form */
+/* Contact Form */
 .contact-form {
     padding-top: 100px;
 }
-  
+
 /* CSS untuk tags <input> dan <textarea> */
-input, textarea {
+input,
+textarea {
     width: 400px;
     margin-top: 10px;
     margin-bottom: 30px;
@@ -159,30 +162,30 @@ input, textarea {
     font-size: 18px;
     border: 1px solid #dee7ec;
 }
-  
+
 /* CSS untuk contact-submit */
 .contact-submit {
     background-color: #dee7ec;
     color: #889eab;
 }
-  
-  /* Footer */
+
+/* Footer */
 .footer {
     background-color: #d3a87d;
     color: #fff;
     height: 120px;
     padding: 40px;
-  }
-  
+}
+
 .footer-logo {
     float: left;
     font-size: 32px;
 }
-  
+
 .footer-list {
     float: right;
 }
-  
+
 .footer-list li {
     padding-bottom: 20px;
 }
