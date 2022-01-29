@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed CSS</title>
+    <!-- Latihan 1 (CSS dengan 'Embed') -->
+    <style>
+        h1 {
+            color: lightblue;
+            font-family: Arial;
+        }
+
+        /* Latihan 2 (Font Styling dan CSS font shorthand/singkatan) */
+        h3 {
+            /* font: font-style font-variant font-weight font-size/line-height font-family */
+            font: italic normal bold 16px/18px helvetica, arial, sans-serif;
+            /* note, font-size dan font-family (wajib) sedangkan yang lain (optional) */
+        }
+
+        /* Latihan 3 (Text Styling) */
+        h4 {
+            color: red;
+            color: #f0045f;
+            color: rgb(red, green, blue);
+
+            text-align: justify;
+
+            /* Untuk memberikan indentasi (px atau %) */
+            text-indent: 40px;
+
+            /* Untuk memberikan (none, underline, overline, line-through)
+            biasanya digunakan untuk menghilangkan garis pada link*/
+            text-decoration: underline;
+
+            /* Untuk memaksa tulisan menjadi (none, lowercase, uppercase, capitalize) */
+            text-transform: capitalize;
+
+            /* Untuk mengatur jarak antar huruf (letter-spacing), jarak antar kata (word-spacing)*/
+            letter-spacing: 5px;
+            word-spacing: 10px;
+        }
+
+        /* Latihan 4 (Background) */
+        h4 {
+            background-color: red;
+            background-image: url();
+            background-repeat: no-repeat;
+            background-position: top left;
+            background: white url() no-repeat top right;
+        }
+
+        /* Latihan 5 (Pseudo Class) */
+
+        /* pseudo-class yang berhubungan dengan 'link' */
+        /* style default pada sebuah link (a yang memiliki href) */
+        .hello:link {
+            color: orange;
+        }
+
+        /* style ketika kursor mouse berada diatas sebuah link / elemen */
+        .hello:hover {
+            color: green;
+            font-family: arial;
+            font-size: 20px;
+        }
+
+        /* style ketika sebuah link di-klik (keadaan aktif) */
+        .hello:active {
+            font-style: italic;
+        }
+
+        /* style ketika sebuah link sudah pernah dikunjungi sebelumnya */
+        .hello:visited {
+            color: red;
+        }
+
+        /* pseudo-class yang berhubungan dengan posisi elemen (1) */
+        /* (CSS tolong carikan 'a' yang ada di dalam 'li' yang merupakan 'anak pertama') */
+        li:first-child a {
+            color: powderblue;
+        }
+
+        li:last-child a {
+            color: powderblue;
+        }
+
+        /* bisa urutan langsung '3' atau '2n' (kelipatan 2) atau 'even' 'odd' */
+        li:nth-child(3n-2 / 3n+1) a {
+            color: powderblue;
+        }
+
+        li:nth-child(3n+1) a:hover {
+            color: powderblue;
+        }
+
+        /* pseudo-class yang berhubungan dengan posisi elemen (2) */
+        p:first-of-type {
+            color: red;
+        }
+
+        p:last-of-type {
+            color: peru;
+        }
+
+        /* Latihan 6 Inheritance (Pewarisan) */
+        .latihan6-1 {
+            color: green;
+        }
+
+        .latihan6-2 {
+            color: green;
+        }
+
+        /* link (elemen/tag a) secara default tidak dapat mewarisi property 'color', maka dari itu
+        inherit, karena agar link (tag a) dapat mewarisi warna milik parent (latihan6-1)*/
+        .latihan6-2 a {
+            color: inherit;
+        }
+
+        /* Latihan 7 Specificity (spesifik) */
+        /* inline / id / class / element 
+            0 / 0 / 0 / 0 */
+
+        /* ul#sarapan li = 0/1/0/2 */
+        ul#sarapan li {
+            color: green;
+        }
+
+        /* .favorit = 0/0/1/0 */
+        .favorit {
+            color: red;
+        }
+
+        /* dikarenakan ul#sarapan li lebih 'spesifik / berat',
+        maka li dengan class '.favorit' tidak akan diubah menjadi merah.
+        Oleh karena itu, agar bisa berubah .favorit perlu lebih 'spesifik' */
+
+        /* ul#sarapan li.favorit = 0/1/1/2 */
+        ul#sarapan li.favorit {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Hello World!</h1>
+    <!-- Latihan 1 (CSS dengan 'Inline') -->
+    <h2 style="font-family: Arial; text-align: center;">Hello World! v2</h2>
+    <h3>Hello World! v3</h3>
+
+    <a href="#" class="hello">Hello World!</a>
+
+    <ul>
+        <li><a href="#">Link 1</a></li>
+        <li><a href="#">Link 2</a></li>
+        <li><a href="#">Link 3</a></li>
+    </ul>
+    <br>
+    <p>loren ipsum hoho</p>
+    <br>
+    <p>loren ipsum haha</p>
+    <br>
+
+    <!-- Latihan 6 -->
+    <div class="latihan6-1">
+        <h1>Allo World!</h1>
+        <a href="#">Kembali ke halaman utama</a>
+    </div>
+
+    <div class="latihan6-2">
+        <h1>Allo World!</h1>
+        <a href="#">Kembali ke halaman utama</a>
+    </div>
+
+    <!-- Latihan 7 -->
+    <div class="latihan-7">
+        <ul id="sarapan">
+            <li class="favorit">Nasi Goreng</li>
+            <li> Mie Goreng </li>
+        </ul>
+    </div>
+</body>
+
+</html>

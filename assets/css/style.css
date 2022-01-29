@@ -22,6 +22,17 @@ li {
     width: 100px;
 }
 
+/* Sebagai contoh penulisan lainnya 
+(CSS tolong pilih 'img' tapi hanya yang memiliki class 'header-logo' ubah...)
+img.header-logo {
+    width: 100px;
+}
+(CSS tolong pilih 'img' yang terdapat dalam class 'header-logo' ubah...)
+.header-logo img {
+    width: 100px;
+}
+*/
+
 .header-list {
     float: right;
 }
