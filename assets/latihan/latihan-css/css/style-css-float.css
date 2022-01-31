@@ -1,0 +1,127 @@
+.container-1,
+.container-2,
+.container-3 {
+    width: 600px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 10px;
+    /* overflow: auto; adalah salah satu trik untuk mengakali masalah float, 
+    tetapi cara yang lebih tepat adalah menggunakan property 'clear' (left / right / both*/
+}
+
+/* container-1 */
+.satu,
+.dua,
+.tiga {
+    width: 100px;
+    height: 100px;
+}
+
+.satu {
+    background-color: salmon;
+}
+
+.dua {
+    background-color: seagreen;
+    float: right;
+}
+
+.tiga {
+    background-color: skyblue;
+}
+
+/* container-2 */
+.container-2 img {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-right: 5px;
+}
+
+.container-2 p {
+    margin-top: 0;
+}
+
+/* container-3 */
+.kotak {
+    width: 80px;
+    height: 80px;
+    background-color: salmon;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    /* 'line-height' adalah trik untuk men-center-kan sesuatu secara vertikal (value mengikuti height)*/
+    line-height: 80px;
+    margin: 3px;
+    float: left;
+}
+
+/* container-4 */
+.container-4 {
+    width: 800px;
+    border: 1px solid black;
+    margin: auto;
+    padding: 10px;
+}
+
+.kiri {
+    width: 150px;
+    height: 300px;
+    background-color: salmon;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.tengah {
+    width: 500px;
+    height: 300px;
+    background-color: limegreen;
+    float: left;
+}
+
+.kanan {
+    width: 150px;
+    height: 300px;
+    background-color: skyblue;
+    float: left;
+}
+
+/* Latihan property 'clear' */
+/* pertama, buat div kosong dengan class clear */
+/* *banyak yang tidak menganjurkan karena membuat source code menjadi tidak rapih */
+/* .clear {
+    clear: left;
+} */
+
+/* trik lainnya, yaitu menggunakan micro clearfix */
+/**
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    contenteditable attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that are clearfixed.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+/* sebenarnya hanya ini yang dibutuhkan. syntax yang lain hanya mengakali pada browser lain */
+/* cara menggunakannya, yaitu memberikan class 'cf' pada 'container' atau selector yang membutuhkan */
+.cf:after {
+    clear: both;
+}
+
+/**
+  * For IE 6/7 only
+  * Include this rule to trigger hasLayout and contain floats.
+  */
+.cf {
+    *zoom: 1;
+}
