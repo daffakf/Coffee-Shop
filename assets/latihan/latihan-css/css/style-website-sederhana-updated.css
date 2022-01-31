@@ -1,0 +1,276 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Syntax */
+body {
+    /* font: ukuran teks/jarak antar baris */
+    font: 16px/28px arial, sans-serif;
+    background-image: url(../../../img/moroccan-flower.png);
+    background-color: #eaeaea;
+    color: #333;
+}
+
+.container {
+    width: 1000px;
+    margin: auto;
+    background-color: white;
+}
+
+/* header */
+header {
+    padding: 20px 20px 10px;
+}
+
+header .judul {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+header li {
+    display: inline-block;
+    list-style: none;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+header a {
+    text-decoration: none;
+    color: salmon;
+    padding: 5px;
+}
+
+a:hover {
+    background-color: lightblue;
+    color: purple;
+    padding: 5px;
+}
+
+a:active {
+    color: violet;
+}
+
+/* hero */
+.hero {
+    height: 350px;
+    background-image: url(../../../img/background_header1.jpg);
+    background-size: cover;
+    background-position: 0 -50px;
+    border-top: 3px solid red;
+    border-bottom: 3px solid lightskyblue;
+}
+
+/* main */
+.contents-1 {
+    width: 700px;
+    padding: 20px;
+    box-sizing: border-box;
+    float: left;
+}
+
+.contents-1 h2 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.contents-1 h3 {
+    font-size: 14px;
+    margin-top: -5px;
+}
+
+.contents-1 h3 a {
+    color: lightskyblue;
+    text-decoration: none;
+}
+
+.contents-1 p {
+    font-size: 12px;
+    margin-top: 10px;
+    text-align: justify;
+}
+
+/* sidebar */
+
+.contents-2 {
+    width: 300px;
+    float: right;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contents-2 img {
+    width: 80px;
+    height: auto;
+    float: left;
+    padding-right: 10px;
+}
+
+.contents-2 h3 {
+    font-weight: bold;
+    color: #666;
+}
+
+.contents-2 p {
+    font: 12px/18px arial;
+    text-align: justify;
+}
+
+/* footer */
+footer {
+    padding: 10px;
+    background-color: rgb(34, 33, 33);
+}
+
+footer h3 {
+    text-align: center;
+    color: #eaeaea;
+}
+
+/* clearfix */
+.cf:before,
+.cf:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+.cf {
+    *zoom: 1;
+}
