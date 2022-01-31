@@ -1,0 +1,61 @@
+/* property 'position' (static, relative, absolute, fixed)
+note: dengan menggunakan property 'non-static' (relative, absolute), 
+maka akan dapat menggunakan property (top, right, bottom, left) untuk mengubah posisi.
+
+- static = default
+
+- relative = membuat 'objek' berada di dimensi lain / naik satu tingkat
+    posisi semula menjadi kosong. Namun,'objek' dibawahnya tidak 'tempat kosong' tersebut.
+note: ketika menggerakkan elemen dengan posisi relative, elemen akan bergerak relatif
+terhadap posisi 'semulanya'.
+        
+- absolute = membuat 'objek' berada di dimensi lain / naik satu tingkat. Namun,
+    posisi semula 'objek' tersebut akan di isi oleh 'objek' selanjutnya (dibawahnya).
+note: ketika menggerakkan elemen dengan posisi relative, elemen akan bergerak relatif
+terhadap posisi dari 'elemen parent-nya', selama elemen parent-nya memiliki posisi yang
+juga non-static.
+note: 'parent' yang dimaksud adalah parent terdekatnya yang non-static.
+
+- fixed = posisi 'objek' akan selalu bergerak relatif terhadap window browser. Jadi,
+    'objek' tidak adakan memperdulikan elemen parent-nya meskipun memiliki posisi non-static
+note: posisi 'objek' tersebut juga akan terkunci.
+terkunci (tidak akan berubah posisi meskipun di-scroll). Jadi, mengikuti window browser.
+*/
+
+/* bila container tidak diberi position relative maka 'kotak' violet (.dua) tersebut akan 
+berada di pojok kiri body karena .container tidak berada di dalam 'dimensi' yang sama
+dengan 'kotak' violet (.dua)*/
+
+body {
+    height: 2000px;
+}
+
+.container {
+    width: 600px;
+    height: 600px;
+    border: 10px solid red;
+    position: relative;
+}
+
+div {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+}
+
+.satu {
+    background-color: salmon;
+}
+
+.dua {
+    width: 100%;
+    height: 40px;
+    background-color: limegreen;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tiga {
+    background-color: skyblue;
+}
