@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daffa Ksatria Firdaus">
+    <title>CSS Z-Indeks</title>
+    <link rel="stylesheet" href="style-css-z-indeks.css">
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+        }
+
+        /* 1. 'kotak' .tiga berada paling depan karena ditulis paling akhir (html) */
+
+        /* 2. setelah z-indeks menggapa .dua menjadi paling depan karena memiliki z-indeks 
+        lebih besar daripada yang lain (.satu = 1 , .tiga = tidak memiliki (bukan 0) */
+
+        /* tips: z-indeks: 9999 untuk paling depan, -9999 untuk paling belakang (biasanya) */
+        .satu {
+            background-color: salmon;
+            z-index: 1;
+        }
+
+        .dua {
+            background-color: violet;
+            top: 100px;
+            left: 100px;
+            z-index: 2;
+        }
+
+        .tiga {
+            background-color: skyblue;
+            top: 200px;
+            left: 200px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="satu"></div>
+    <div class="dua"></div>
+    <div class="tiga"></div>
+
+</body>
+
+</html>
