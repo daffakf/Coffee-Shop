@@ -143,10 +143,34 @@ body {
     color: #333;
 }
 
+.top-bar {
+    height: 60px;
+    background-color: skyblue;
+    border-bottom: 3px solid salmon;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 9999;
+}
+
 .container {
     width: 1000px;
-    margin: auto;
+    margin: 80px auto;
     background-color: white;
+    position: relative;
+}
+
+.twitter {
+    width: 200px;
+    height: 200px;
+    background-image: url(../../../img/twitter-ribbon-resize.png);
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    position: absolute;
+    top: -20px;
+    right: -28px;
 }
 
 /* header */
@@ -172,10 +196,9 @@ header a {
     padding: 5px;
 }
 
-a:hover {
+header a:hover {
     background-color: lightblue;
     color: purple;
-    padding: 5px;
 }
 
 a:active {
