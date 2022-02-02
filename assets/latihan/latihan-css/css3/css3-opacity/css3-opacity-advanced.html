@@ -4,24 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="author" content="Daffa Ksatria Firdaus">
-    <title>CSS3 OPACITY</title>
+    <title>CSS3 OPACITY Advanced</title>
     <style>
         body {
-            background-image: url(../../../img/moroccan-flower.png);
+            background-image: url(../../../../img/moroccan-flower.png);
         }
 
         .kotak-1 {
             width: 400px;
             height: 400px;
-            background-color: salmon;
-            opacity: 0.5;
+            /* untuk menyelesaikan masalah sebelumnya, yaitu 
+            membuat .kotak-2 saja yang menjadi solid menggunakan rgba atau hsla.
+
+            rgba (red, green, blue, alpha) alpha = transparansi 
+            Jadi, saat ini kita memberikan tranparansi kepada warna bukan element-nya lagi */
+            background-color: rgba(250, 128, 114, 0.5);
             position: relative;
 
             margin: 100px;
         }
 
-        /* mengapa kotak-2 transparant walaupun belum diberikan opacity?
-        karena opacity: 1; (solid) kotak-2 mengikuti parent-nya (pembungkusnya) */
         .kotak-2 {
             width: 100px;
             height: 100px;
@@ -31,17 +33,14 @@
             bottom: -50px;
         }
 
-        /* opacity kotak-3 lebih transparant walaupun valuenya 0.5 juga
-        karena opacity-nya mengikuti parent / pembungkusnya (.kotak-1)
-        sehingga nilai opacity milik kotak-3 yang sebenarnya adalah 0.25 */
         .kotak-3 {
             width: 100px;
             height: 100px;
-            background-color: maroon;
-            opacity: .5;
+            /* hsla (hue, saturation, lightness, alpha) */
+            background-color: hsla(24, 100%, 68%, 0.5);
             position: absolute;
-            right: -50px;
-            top: -50px;
+            left: -50px;
+            bottom: -50px;
         }
     </style>
 </head>
