@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daffa Ksatria Firdaus">
+    <title>CSS3 Border Radius</title>
+    <style>
+        /* *bisa juga dengan menambahkan class kotak di tiap div */
+        .kotak {
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            float: left;
+
+            margin: 10px;
+        }
+
+        div {
+            float: left;
+
+        }
+
+        /* membuat sudut tumpul */
+        .kotak-1 {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            /* 50% / 100px (1/2 dari width dan height, atau salah satunya untuk 
+            membuat oval) untuk membuat kotak menjadi lingkaran */
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+
+            margin: 10px;
+        }
+
+        /* membuat salah satu sudut menjadi tumpul */
+        .kotak-2 {
+            width: 200px;
+            height: 200px;
+            background-color: limegreen;
+            /* untuk membuat salah satu sudut menjadi tumpul 
+                    border-top-right-radius: 50%;
+
+            atau menggunakan border-radius dengan 4 value 
+            note: urutan value mengikuti arah jarum jam, dimulai dari 'top left' */
+            border-radius: 0 50% 0 50%;
+            color: white;
+            text-align: center;
+            line-height: 200px;
+
+            margin: 10px;
+        }
+
+        /* latihan 3 */
+        .kotak-3 {
+            width: 200px;
+            height: 200px;
+            background-color: limegreen;
+            /* gambar mengikuti bentuk bangun ruang */
+            background-image: url(../../../img/liz.jpg);
+            background-size: cover;
+
+            /* digunakan ketika gambar muncul lebih dari satu */
+            background-repeat: no-repeat;
+
+            border-radius: 0 50% 0 50%;
+
+            margin: 10px;
+        }
+
+        /* latihan 4 */
+        /* sebelum diperbaiki */
+        .kotak-4 {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            border-radius: 50%;
+            text-align: center;
+
+            margin: 10px;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+        }
+
+        /* setelah diperbaiki */
+        .kotak-5 {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            border-radius: 50%;
+            text-align: center;
+            /* untuk menyembunyikan 'apapun' yang keluar dari border radius 
+            Jadi, tinggal menyesuaikan ukuran width dan height */
+            overflow: hidden;
+
+            margin: 10px;
+        }
+
+        /* membuat setengah lingkaran */
+        .kotak-6 {
+            height: 100px;
+            background-color: skyblue;
+            border-radius: 100px 100px 0 0;
+            border: 6px solid black;
+            /* box-sizing untuk membuat ukuran 'kotak' tidak bertambah dikarenakan property lainnya */
+            box-sizing: border-box;
+        }
+
+        /* membuat setengah lingkaran */
+        .kotak-7 {
+            margin-top: 110px;
+            height: 100px;
+            background-color: skyblue;
+            border-radius: 0 0 100px 100px;
+            border: 6px solid black;
+            /* box-sizing untuk membuat ukuran 'kotak' tidak bertambah dikarenakan property lainnya */
+            box-sizing: border-box;
+        }
+
+        .kotak-8 {
+            background-color: white;
+            border-radius: 20px 100px 100px 0;
+            border: 6px solid maroon;
+            /* box-sizing untuk membuat ukuran 'kotak' tidak bertambah dikarenakan property lainnya */
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="kotak kotak-1">Hello World!</div>
+    <div class="kotak kotak-2">2</div>
+    <div class="kotak kotak-3"></div>
+    <!-- sebelum diperbaiki -->
+    <div class="kotak kotak-4">
+        <img src="../../../img/liz.jpg" alt="IVE's Liz">
+    </div>
+    <!-- setelah diperbaiki -->
+    <div class="kotak kotak-5">
+        <img src="../../../img/liz.jpg" alt="IVE's Liz">
+    </div>
+    <div class="kotak kotak-6"></div>
+    <div class="kotak kotak-7"></div>
+    <div class="kotak kotak-8"></div>
+
+</body>
+
+</html>
