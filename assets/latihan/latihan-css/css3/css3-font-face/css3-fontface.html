@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>CSS3 Fonts</title>
+    <!-- 1. font-family, 2. font google (font.google.com), 3 @font-face (harus memiliki font terlebih dahulu) -->
+    <!-- @font-face {
+        font-family: 'namaFontbaru';
+        src: url('lokasi/file/fontbaru.eot');
+        src: url() format('embedded-opentype'),
+             url(fontbaru.woff2) format('woff2')
+        *tipe format file font (ttf (truetype) / otf, woff, woff2, svg)
+    } -->
+    <style>
+        @font-face {
+            font-family: "Alex Brush";
+            src: url('AlexBrush-Regular.ttf') format('truetype');
+        }
+
+        /* versi woff */
+        @font-face {
+            font-family: 'alex_brushregular';
+            src: url('alexbrush-regular-webfont.woff2') format('woff2'),
+                url('alexbrush-regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
+
+        @font-face {
+            font-family: 'open_sansregular';
+            src: url('OpenSans-Regular-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+
+        h1 {
+            font-size: 100px;
+            text-align: center;
+            font-family: "alex_brushregular", arial;
+        }
+
+        h2 {
+            font-size: 100px;
+            text-align: center;
+            font-family: "open_sansregular", arial;
+        }
+
+        h3 {
+            font-size: 100px;
+            text-align: center;
+            font-family: arial;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello World!</h1>
+    <h2>Hello World!</h2>
+    <h3>Hello World!</h3>
+
+</body>
+
+</html>
