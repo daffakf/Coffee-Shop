@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Radial-Gradients</title>
+    <style>
+        /* radial-gradient */
+        /* -sintaks sederhana = background-image: radial-gradient (<warna awal>, <warna akhir>) 
+           -sintaks lengkap = 
+           radial-gradient(
+               <tipe> <jangkauan> at <posisi-y> <posisi-x>, <warna-1>, <warna-n>,
+           ); 
+           tipe = elipse / circle (elipse = seperti oval, circle = lingkaran sempurna)
+           jangkauan = jarak dari pusat gradient ke sisi terluar-nya.
+                *untuk menentukan radius dari gradasi
+                closest-corner = jarak dari pusat gradient ke 'sudut terdekat' elemen
+                closest-side = 'sisi terdekat'
+                farthest-corner = 'sudut terjauh'
+                farthest-side = 'sisi terjaduh'
+
+           <posisi-y>, <posisi-x> = posisi dari pusat degradasinya
+            value = <posisi-y> (top, center, bottom, px), <posisi-x> (left, center, right, px)*/
+        /* *warna awal sebagai warna pusat lingkaran, bisa juga menggunakan 'color stop' */
+        div {
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: salmon;
+        }
+
+        /* sisi terdekat */
+        .a1 {
+            background-image: radial-gradient(circle closest-side, red, blue);
+        }
+
+        /* sisi terjaduh */
+        .a2 {
+            background-image: radial-gradient(circle farthest-side, red, blue);
+        }
+
+        /* sudut terdekat, titik pusat berada di tengah-tengah */
+        .a3 {
+            background-image: radial-gradient(circle closest-corner, red, blue);
+        }
+
+        /* sudut terjauh, titik pusat berada di kiri atas */
+        .a4 {
+            background-image: radial-gradient(circle farthest-side at top left, red, blue);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="a1"></div>
+    <div class="a2"></div>
+    <div class="a3"></div>
+    <div class="a4"></div>
+
+</body>
+
+</html>

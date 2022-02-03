@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daffa Ksatria Firdaus">
+    <title>Linear-Gradients</title>
+    <style>
+        /* Gradients */
+        /* background / background-color: Linear-gradient(<warna awal>, <warna akhir>) 
+        (warna, rgb, heksa) 
+        linear-gradient(<sudut> / <arah>, <warna awal>, <warna akhir> ) 
+            
+        (90deg / left, red, green)
+        *sudut = 90deg, 45deg
+        *arah = to bottom (atas ke bawah), to top, to left (kanan ke kiri), to right 
+            arah diagonal = to left top (bawah kanan ke left top), to left bottom, to right top, etc. 
+            Jadi, value-nya adalah tujuannya.*/
+
+        /* Color Stop */
+        /* linear-gradient('<sudut> / <arah>', <warna awal> n% / px (n persen / pixel), <warna akhir> n%)  */
+        div {
+            width: 600px;
+            height: 300px;
+            margin: 50px auto;
+            background-color: salmon;
+        }
+
+        .a1 {
+            background-image: linear-gradient(red, #fd6, rgba(255, 0, 255, 1), green);
+        }
+
+        .a2 {
+            background: linear-gradient(45deg, red, #fd6, rgba(255, 0, 255, 1), green);
+        }
+
+        /* to left = dari kanan ke kiri */
+        .a3 {
+            background-image: linear-gradient(to right, red 60%, green 90%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="a1"></div>
+    <div class="a2"></div>
+    <div class="a3"></div>
+
+</body>
+
+</html>
