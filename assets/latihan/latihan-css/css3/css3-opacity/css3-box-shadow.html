@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daffa Ksatria Firdaus">
+    <title>CSS3 box-shadow</title>
+    <style>
+        /* box-shadow value ('inset', x-offset, y-offset, blur, 'spread', color) 
+        opsional (inset, spread). wajib (x-offset, y-offset, blur, color)
+
+        inset   = membuat bayangan berpindah kedalam 
+        x-offset, y-offset = untuk mengatur banyangan bergerak (numerik) (x = horizontal, y = vertikal)
+        blur    = untuk mengatur 'blur' ('size' bila di photoshop)
+        spread  = untuk mengatur ukuran ('size') dari bayangan
+        color   = untuk mengatur warna bayangan (rgba etc.)
+        */
+        body {
+            background-image: url(../../../../img/moroccan-flower.png);
+        }
+
+        .kotak {
+            width: 300px;
+            height: 300px;
+            margin: 50px auto;
+
+            color: white;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        /* x-offset, y-offset, blur, color */
+        .kotak-1 {
+            background-color: limegreen;
+            box-shadow: -10px 10px 10px rgba(51, 51, 51, 0.75);
+
+            /* transisi 0.4s */
+            transition: .4s;
+        }
+
+        /* Spread */
+        .kotak-a {
+            width: 800px;
+            height: 400px;
+            margin: 50px auto;
+        }
+
+        .kotak-2 {
+            background-color: limegreen;
+            box-shadow: 0px 40px 10px -20px rgba(51, 51, 51, 0.75);
+            float: left;
+
+            /* transisi 0.4s */
+            transition: .4s;
+        }
+
+        .kotak-3 {
+            background-color: limegreen;
+            box-shadow: 10px 10px 10px 10px rgba(51, 51, 51, 0.75);
+            float: right;
+
+            /* trnasisi 0.4s */
+            transition: .4s;
+        }
+
+        /* inset */
+        .kotak-4 {
+            background-color: limegreen;
+            box-shadow: 0 0 10px 10px rgba(0, 0, 0, .5);
+
+            float: left;
+        }
+
+        .kotak-5 {
+            background-color: limegreen;
+            box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, .5);
+
+            float: right;
+        }
+
+        /* multiple box-shadow */
+        .kotak-6 {
+            background-color: limegreen;
+            box-shadow: 10px 10px 10px rgba(255, 0, 0, 0.5), -10px -10px 10px rgba(0, 0, 255, 0.5);
+
+            float: left;
+        }
+
+        .kotak-7 {
+            background-color: skyblue;
+            box-shadow: 0 0 0 5px limegreen, 0 0 0 10px yellow, 0 0 0 15px red;
+
+            float: right;
+            border-radius: 50%;
+        }
+
+        /* transisi (coba-coba) */
+        /* kotak-2 */
+        .kotak-1:hover {
+            background-color: skyblue;
+
+            box-shadow: -10px 30px 15px rgba(51, 51, 51, 0.75);
+            margin-top: 40px;
+
+            /* agar kotak-a tidak naik */
+            margin-bottom: 60px;
+        }
+
+        .kotak-2:hover {
+            background-color: violet;
+
+            box-shadow: 0px 80px 10px -30px rgba(51, 51, 51, 0.30);
+            margin-top: 40px;
+        }
+
+        .kotak-3:hover {
+            background-color: salmon;
+
+            box-shadow: 10px 30px 15px 5px rgba(51, 51, 51, 0.5);
+            margin-top: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="kotak kotak-1">Tanpa Spread</div>
+    <div class="kotak-a">
+        <div class="kotak kotak-2">Dengan Spread (value minus)</div>
+        <div class="kotak kotak-3">Dengan Spread (value positif)</div>
+    </div>
+    <div class="kotak-a">
+        <div class="kotak kotak-4">Tanpa Inset</div>
+        <div class="kotak kotak-5">Dengan Inset</div>
+    </div>
+    <div class="kotak-a">
+        <div class="kotak kotak-6">Multiple box-shadow</div>
+        <div class="kotak kotak-7">Multiple box-shadow</div>
+    </div>
+
+
+</body>
+
+</html>
