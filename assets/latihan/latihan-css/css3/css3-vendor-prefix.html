@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vendor Prefix</title>
+    <style>
+        /* jika suatu property belum support pada suatu browser maka perlu menambahkan 'vendor prefix' */
+        /* contohnya property filter yang belum support untuk Chrome (sekarang sudah) 
+            *pada syntax perlu menambahkan
+            -webkit- = Google Chrome, Safari, opera versi terbaru, -moz- = firefox, -ms- = internet exp.
+            img {
+                -webkit-filter: grayscale(100%);
+            } */
+
+        /* 
+        blur(px)
+        brightness(angka | %) mengatur gelap terangnya gambar 0% - 9999%
+        contrast(angka | %)
+        saturate(angka | %) mengatur saturasi gambar semakin besar semakin berwarna (gambarnya)
+        grayscale(angka | %) membuat gambar menjadi keabuan
+        sepia(angka | %) membuat gambar menjadi kekuningan (sama seperti grayscale)
+        hue-rotate(angka | %) memutar roda warna (value = 100deg)
+        invert(angka | %) membuat gambar seperti negatif film
+
+        *property di bawah ini menggunakan kemampuan 'browser' untuk memprosesnya sedangkan 
+        *property filter menggunakan kemampuan dari hardware penggunannya sehingga proses lebih cepat, tapi terkendala karena belum semua browser ter-support
+        opacity(angka | %)
+
+        *keuntungan dari drop-shadow (filter) adalah bisa diimplementasikan pada text juga.
+        *keuntungan lainnya dapat memberikan 'bayangan' pada element yang tidak transparan di gambarnya
+        drop-shadow(sama seperti box-shadow) 
+        */
+        body {
+            text-align: center;
+        }
+
+        img {
+            width: 500px;
+            height: 500px;
+            filter: saturate(150%) drop-shadow(5px 5px 10px black) blur(1px);
+            margin: 50px auto;
+            transition: 1s;
+        }
+
+        .a1 img {
+            width: 613px;
+            height: 407px;
+            filter: drop-shadow(5px 5px 10px black) blur(1px);
+            transition: 1s;
+        }
+
+        img:hover {
+            filter: saturate(150%) drop-shadow(5px 5px 10px black);
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="../../../img/liz.jpg" alt="IVE's Liz">
+    <br>
+    <div class="a1">
+        <img src="../../../img/minju.png" alt="IZ*ONE's Minju">
+    </div>
+
+
+</body>
+
+</html>
