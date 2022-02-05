@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daffa Ksatria Firdaus">
+    <title>CSS3 - Transform</title>
+    <style>
+        p {
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* 
+            *transform sama seperti filter, yaitu menggunakan acceleration dari hardware / GPU / VGA user untuk
+            scale(angka) / scaleX, sclaeY (memperbesar)
+            rotate(deg) / rotateX, rotateY (memutar)
+            skew(deg) / skewX, skewY (membuat element menjadi condong/miring)
+            translate(px) / translateX, translateY (mengubah posisi)
+        */
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 50px auto;
+            transition: 1s;
+        }
+
+        .kotak:hover {
+            /* mengubah ukuran menjadi 2 kali lipat dari ukuran aslinya, 
+            (0.5) = mengubah ukuran menjadi 1/2 dari ukuran aslinya 
+
+            *syntax
+            scale(1.5)
+            scale(1.5, 2); = mengubah ukuran menjadi 1.5 kali lipat untuk horizontal dan 2 kali lipat untuk vertikal
+            scaleX(1.5) scaleY(2); = hanya beda pernulisan
+
+            
+            rotate(45deg); = diputar 45 derajat
+            rotateX(90deg); = diputar (horizontal) seperti membalikan kartu
+            rotateY(90deg); = diputar (vertikal) seperti membalikan kartu 
+            rotateX(180deg); = seperti diputar 180 derajat (horizontal) 
+
+
+            skew(45deg); = memiringkan 'element' 45 derajat
+
+            *efek 'translate' lebih baik dari pada 'position'
+            translate(50px); = memindahkan posisi 'element' ke arah kanan 50px
+            translate(50px, 100px); = memindahkan posisi 'element' ke kanan 50px dan 100px ke bawah
+            translateX(50px) translateY(100px); = hasilnya sama hanya beda penulisan
+            */
+            transform: scale(1.5) rotate(180deg) rotateX(180deg) rotateY(180deg);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="kotak"></div>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi dicta exercitationem corporis labore incidunt,
+        amet maxime magni minima. Fugiat excepturi corporis dicta quibusdam, cupiditate id quis ad libero modi saepe
+        repudiandae reiciendis sunt est nisi, aspernatur ipsa ea eveniet impedit consequuntur voluptas accusantium fuga
+        ratione. Cumque aliquid architecto dicta in?
+    </p>
+
+</body>
+
+</html>
