@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daffa Ksatria Firdaus">
+    <title>Transition</title>
+    <!-- 
+    Property transition memungkinkan kita dapat mengubah nilai dari property HTML 'secara halus' 
+    Transition vs Animation yang membedakan terdapat pada keadaan awal dan keadaan akhir.
+
+    Syntax:
+    transition: [property] '[durasi]' [fungsi] [delay];
+
+    [property] = property apa yang akan bergerak 'secara halus' / mengikuti durasi. (default = all)
+    [durasi] = s / ms (seconds / miliseconds)
+    -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 900px;
+            margin: 40px auto;
+            border: 3px solid black;
+        }
+
+        /* latihan 1, 2 */
+        .kotak-1 {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: 1s;
+        }
+
+        .kotak-1:hover {
+            transform: rotate(180deg);
+        }
+
+        .kotak-2 {
+            width: 100px;
+            height: 100px;
+            background-color: salmon;
+            transition: margin-left 1s;
+        }
+
+        /* agar kotak-2 tidak 'patah-patah' karena property menghitung ulang posisinya, maka dibuatlah pembungkus/alas */
+        /* (Pada saat .container-nya saya hover 'kotak' didalamnya bergeser). Jadi, bebannya berada container bukan di kotak */
+        .container:hover .kotak-2 {
+            transform: rotate(45deg);
+            margin-left: 800px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="kotak-1"></div>
+
+    <div class="container">
+        <div class="kotak-2"></div>
+    </div>
+</body>
+
+</html>
