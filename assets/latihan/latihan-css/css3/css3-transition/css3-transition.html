@@ -14,6 +14,8 @@
 
     [property] = property apa yang akan bergerak 'secara halus' / mengikuti durasi. (default = all)
     [durasi] = s / ms (seconds / miliseconds)
+    [fungsi] / timing function = ease (default), ease-in, ease-out, ease-in-out, linear, cubis-bezier(w,x,y,z)
+    [delay] = memberikan waktu tunggu sebelum transisi berjalan
     -->
     <style>
         body {
@@ -39,17 +41,51 @@
             transform: rotate(180deg);
         }
 
-        .kotak-2 {
+        .kotak {
             width: 100px;
             height: 100px;
             background-color: salmon;
-            transition: margin-left 1s;
+            text-align: center;
+            line-height: 100px;
+            margin: 10px 0;
+        }
+
+        .kotak-2 {
+            transition: all 2s ease;
+        }
+
+        .kotak-3 {
+            transition: all 2s ease-in;
+        }
+
+        .kotak-4 {
+            transition: all 2s ease-out;
+        }
+
+        .kotak-5 {
+            transition: all 2s ease-in-out;
+        }
+
+        .kotak-6 {
+            transition: all 2s linear;
+        }
+
+        .kotak-7 {
+            transition: all 2s cubic-bezier(0.01, -0.23, 0.88, 0.14);
+        }
+
+        /* Fungsi */
+        .kotak-8 {
+            border: 3px solid skyblue;
+            box-sizing: border-box;
+            /* 500ms = 0.5 detik */
+            transition: margin-left 2s, transform 3s 2s, background-color 500ms 3s;
         }
 
         /* agar kotak-2 tidak 'patah-patah' karena property menghitung ulang posisinya, maka dibuatlah pembungkus/alas */
         /* (Pada saat .container-nya saya hover 'kotak' didalamnya bergeser). Jadi, bebannya berada container bukan di kotak */
-        .container:hover .kotak-2 {
-            transform: rotate(45deg);
+        .container:hover .kotak {
+            transform: rotate(720deg);
             margin-left: 800px;
             background-color: skyblue;
         }
@@ -61,8 +97,15 @@
     <div class="kotak-1"></div>
 
     <div class="container">
-        <div class="kotak-2"></div>
+        <div class="kotak kotak-2">ease</div>
+        <div class="kotak kotak-3">ease-in</div>
+        <div class="kotak kotak-4">ease-out</div>
+        <div class="kotak kotak-5">ease-in-out</div>
+        <div class="kotak kotak-6">linear</div>
+        <div class="kotak kotak-7">cubic-bezier</div>
+        <div class="kotak kotak-8">Delay</div>
     </div>
+
 </body>
 
 </html>
