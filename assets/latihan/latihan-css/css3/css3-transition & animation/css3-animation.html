@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Daffa Ksatria Firdaus">
+    <title>CSS3 - Animation</title>
+    <style>
+        /* 
+        1. styntax:
+        @keyframes [name] {
+            from / 0% (salah satu) {
+                [property-css]
+            }
+
+            to / 100% {
+                [property-css]
+            }
+        } 
+        2. value pada animation
+        animation: 
+        [name] [durasi] [timing-function] [delay] [iteration-count] 
+        [direction] [fill-mode] [play-state]
+
+        1. name = nama animasi pada keyframe yang dibuat
+        2. durasi, timing-funcion, delay = sama seperti pada property transition
+        3. iteration-count = animasi akan diulang berapa kali. <angka> / [infinite] (default = 1)
+        4. direction = dari mana animasi akan berjalan terlebih dahulu (dari awal / dari akhir). 
+            - [normal] (default), [reverse], [alternate] (seolah-olah bolak-balik), [alternate-reverse] (hanya berbeda awalan).
+        5. fill-mode = menentukan akhir dari animasinya seperti apa. 
+            - [none] [forwards] [backwards] [both]
+                - [forwards] = untuk membuat animasi tidak loncat ke awal (akan berhenti di keadaan akhir).
+        6. play-state = [running] [pause] (menggunakan javascript)
+        */
+        @keyframes animasiKotak {
+            0% {
+                width: 200px;
+            }
+
+            50% {
+                width: 500px;
+                height: 200px;
+            }
+
+            100% {
+                width: 500px;
+                height: 500px;
+            }
+        }
+
+        .kotak {
+            width: 200px;
+            height: 200px;
+            background-color: salmon;
+            margin: 50px 0;
+        }
+
+        /* kemudian memberikan property animation ke selector yang diinginkan */
+        /* 1. ketika kursor berada di kotak-1 maka proses animasi akan berjalan */
+        .kotak-1:hover {
+            /* animation: [nama animasi] [durasi] [timing function] */
+            animation: animasiKotak 2s ease;
+        }
+
+        /* 2. ketika halaman ter-load maka proses animasi akan berjalan */
+        .kotak-2 {
+            /*             
+            width: 200px;
+            height: 200px;
+            background-color: salmon; */
+
+            animation: animasiKotak 2s ease;
+            /* bisa juga ditulis seperti ini:
+            animation-name: animasiKotak;
+            animation-duration: 2s;
+            animation-timing-function: ease;
+            ...
+            */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="kotak kotak-1"></div>
+    <div class="kotak kotak-2"></div>
+
+</body>
+
+</html>
